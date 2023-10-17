@@ -1,9 +1,11 @@
+import { Outlet } from "react-router-dom";
 import "./App.css";
-
+import Navbar from "./Components/Shared/Navbar";
 function App() {
   return (
     <>
-      <h1>RHR-tech</h1>
+      <Navbar></Navbar>
+      <Outlet></Outlet>
     </>
   );
 }
