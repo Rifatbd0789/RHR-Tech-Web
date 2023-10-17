@@ -11,6 +11,15 @@ const Add = () => {
     const description = form.description.value;
     const newProduct = { name, brand, type, price, photo, rating, description };
     console.log(newProduct);
+    fetch("http://localhost:5000/products", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(newProduct),
+    })
+      .then((res) => res.json())
+      .then((data) => console.log(data));
   };
   return (
     <div>
@@ -39,12 +48,18 @@ const Add = () => {
                   <label className="label">
                     <span className="label-text">Brand Name</span>
                   </label>
-                  <input
-                    type="text"
+                  <select
                     name="brand"
-                    placeholder="Product's Brand name..."
-                    className="input input-bordered w-full"
-                  />
+                    className="select select-bordered w-full max-w-xl"
+                  >
+                    <option disabled>Brand of product?</option>
+                    <option value="google">Google</option>
+                    <option value="apple">Apple</option>
+                    <option value="intel">Intel</option>
+                    <option value="sony">Sony</option>
+                    <option value="samsung">Samsung</option>
+                    <option value="xiaomi">Xiaomi</option>
+                  </select>
                 </div>
               </div>
               <div className="form-control flex-row w-full gap-7">
