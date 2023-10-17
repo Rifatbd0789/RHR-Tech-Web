@@ -1,3 +1,5 @@
+import Swal from "sweetalert2";
+
 const Add = () => {
   const handleAddData = (e) => {
     e.preventDefault();
@@ -10,7 +12,7 @@ const Add = () => {
     const rating = form.rating.value;
     const description = form.description.value;
     const newProduct = { name, brand, type, price, photo, rating, description };
-    console.log(newProduct);
+    // console.log(newProduct);
     fetch("http://localhost:5000/products", {
       method: "POST",
       headers: {
@@ -19,7 +21,16 @@ const Add = () => {
       body: JSON.stringify(newProduct),
     })
       .then((res) => res.json())
-      .then((data) => console.log(data));
+      .then((data) => {
+        if (data.insertedId) {
+          Swal.fire({
+            icon: "success",
+            title: "Congratulations !",
+            text: `${name} added successfully!`,
+          });
+          form.reset();
+        }
+      });
   };
   return (
     <div>
@@ -52,7 +63,7 @@ const Add = () => {
                     name="brand"
                     className="select select-bordered w-full max-w-xl"
                   >
-                    <option disabled>Brand of product?</option>
+                    <option>Which Brand product?</option>
                     <option value="google">Google</option>
                     <option value="apple">Apple</option>
                     <option value="intel">Intel</option>
@@ -72,7 +83,7 @@ const Add = () => {
                     name="type"
                     className="select select-bordered w-full max-w-xl"
                   >
-                    <option disabled>Type of product?</option>
+                    <option>Type of product?</option>
                     <option value="phone">Phone</option>
                     <option value="laptop">Laptop</option>
                     <option value="headphone">Headphone</option>

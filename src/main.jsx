@@ -6,6 +6,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./Components/Home.jsx";
 import Add from "./Components/Add.jsx";
 import Cart from "./Components/Cart.jsx";
+import Details from "./Components/Details.jsx";
+import Card from "./Components/Card.jsx";
 
 const router = createBrowserRouter([
   {
@@ -23,6 +25,12 @@ const router = createBrowserRouter([
       {
         path: "/cart",
         element: <Cart />,
+      },
+      {
+        path: "/card/:brand",
+        element: <Card />,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/products/${params.brand}`),
       },
     ],
   },
