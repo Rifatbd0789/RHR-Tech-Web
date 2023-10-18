@@ -1,36 +1,9 @@
-import Swal from "sweetalert2";
-
-const Add = () => {
-  const handleAddData = (e) => {
+import { useLoaderData } from "react-router-dom";
+const Updates = () => {
+  const product = useLoaderData();
+  //   console.log(product);
+  const handleUpdate = (e) => {
     e.preventDefault();
-    const form = e.target;
-    const name = form.name.value;
-    const brand = form.brand.value;
-    const type = form.type.value;
-    const price = form.price.value;
-    const photo = form.photo.value;
-    const rating = form.rating.value;
-    const description = form.description.value;
-    const newProduct = { name, brand, type, price, photo, rating, description };
-    // console.log(newProduct);
-    fetch("http://localhost:5000/products", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(newProduct),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        if (data.insertedId) {
-          Swal.fire({
-            icon: "success",
-            title: "Congratulations !",
-            text: `${name} added successfully!`,
-          });
-          form.reset();
-        }
-      });
   };
   return (
     <div>
@@ -38,11 +11,11 @@ const Add = () => {
         <div className=" hero-content flex-col mx-10">
           <div className="text-center text-white lg:text-left">
             <h1 className="text-3xl md:text-5xl font-bold">
-              Add your product!
+              Update your product!
             </h1>
           </div>
           <div className="card  w-full  shadow-2xl bg-base-100">
-            <form onSubmit={handleAddData} className="card-body">
+            <form onSubmit={handleUpdate} className="card-body">
               <div className="form-control md:flex-row w-full gap-7">
                 {/* Name */}
                 <div className="md:w-1/2">
@@ -53,6 +26,7 @@ const Add = () => {
                     type="text"
                     placeholder="Product's Name..."
                     name="name"
+                    defaultValue={product.name}
                     className="input input-bordered w-full"
                     required
                   />
@@ -64,6 +38,7 @@ const Add = () => {
                   </label>
                   <select
                     name="brand"
+                    defaultValue={product.brand}
                     className="select select-bordered w-full max-w-xl"
                   >
                     <option>Which Brand product?</option>
@@ -84,6 +59,7 @@ const Add = () => {
                   </label>
                   <select
                     name="type"
+                    defaultValue={product.type}
                     className="select select-bordered w-full max-w-xl"
                   >
                     <option>Type of product?</option>
@@ -103,6 +79,7 @@ const Add = () => {
                     type="text"
                     placeholder="Product's Price"
                     name="price"
+                    defaultValue={product.price}
                     className="input input-bordered w-full"
                   />
                 </div>
@@ -117,6 +94,7 @@ const Add = () => {
                     type="text"
                     placeholder="Product's Photo URL..."
                     name="photo"
+                    defaultValue={product.photo}
                     className="input input-bordered w-full"
                   />
                 </div>
@@ -168,6 +146,7 @@ const Add = () => {
                   <textarea
                     placeholder="Short description of your product..."
                     name="description"
+                    defaultValue={product.description}
                     className="textarea textarea-bordered  w-full "
                   ></textarea>
                 </div>
@@ -175,7 +154,7 @@ const Add = () => {
 
               <div className="form-control md:mx-28 mt-6">
                 <button className="btn text-white hover:text-black bg-cyan-500">
-                  Add
+                  Update
                 </button>
               </div>
             </form>
@@ -186,4 +165,4 @@ const Add = () => {
   );
 };
 
-export default Add;
+export default Updates;

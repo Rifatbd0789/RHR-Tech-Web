@@ -6,8 +6,13 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./Components/Home.jsx";
 import Add from "./Components/Add.jsx";
 import Cart from "./Components/Cart.jsx";
-import Details from "./Components/Details.jsx";
 import Card from "./Components/Card.jsx";
+import Login from "./Components/Login.jsx";
+import Register from "./Components/Register.jsx";
+import Provider from "./Components/ContextProvider/Provider.jsx";
+// import Brands from "./Components/Brands.jsx";
+import Details from "./Components/Details.jsx";
+import Updates from "./Components/Updates.jsx";
 
 const router = createBrowserRouter([
   {
@@ -27,10 +32,30 @@ const router = createBrowserRouter([
         element: <Cart />,
       },
       {
+        path: "/login",
+        element: <Login />,
+      },
+      {
+        path: "/register",
+        element: <Register />,
+      },
+      {
         path: "/card/:brand",
         element: <Card />,
         loader: ({ params }) =>
           fetch(`http://localhost:5000/products/${params.brand}`),
+      },
+      {
+        path: "/card/brand/:id",
+        element: <Details />,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/products/brand/${params.id}`),
+      },
+      {
+        path: "/card/update/:id",
+        element: <Updates />,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/products/brand/${params.id}`),
       },
     ],
   },
@@ -38,6 +63,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <Provider>
+      <RouterProvider router={router} />
+    </Provider>
   </React.StrictMode>
 );
