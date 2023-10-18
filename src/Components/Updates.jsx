@@ -4,6 +4,15 @@ const Updates = () => {
   //   console.log(product);
   const handleUpdate = (e) => {
     e.preventDefault();
+    const form = e.target;
+    const name = form.name.value;
+    const brand = form.brand.value;
+    const type = form.type.value;
+    const price = form.price.value;
+    const photo = form.photo.value;
+    const rating = form.rating.value;
+    const newProduct = { name, brand, type, price, photo, rating };
+    console.log(newProduct);
   };
   return (
     <div>
@@ -108,31 +117,36 @@ const Updates = () => {
                   <div className="rating rating-lg">
                     <input
                       type="radio"
-                      name="rating-1"
+                      name="rating"
+                      value="1"
                       defaultChecked={product.rating === "1"}
                       className="mask mask-star-2 bg-orange-400"
                     />
                     <input
                       type="radio"
-                      name="rating-2"
+                      name="rating"
+                      value="2"
                       defaultChecked={product.rating === "2"}
                       className="mask mask-star-2 bg-orange-400"
                     />
                     <input
                       type="radio"
-                      name="rating-3"
+                      name="rating"
+                      value="3"
                       defaultChecked={product.rating === "3"}
                       className="mask mask-star-2 bg-orange-400"
                     />
                     <input
                       type="radio"
-                      name="rating-4"
+                      name="rating"
+                      value="4"
                       defaultChecked={product.rating === "4"}
                       className="mask mask-star-2 bg-orange-400"
                     />
                     <input
                       type="radio"
-                      name="rating-5"
+                      name="rating"
+                      value="5"
                       defaultChecked={product.rating === "5"}
                       className="mask mask-star-2 bg-orange-400"
                     />

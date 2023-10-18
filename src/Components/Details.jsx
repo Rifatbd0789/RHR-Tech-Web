@@ -3,40 +3,37 @@ import Swal from "sweetalert2";
 // import { Link } from "react-router-dom";
 const Details = () => {
   const product = useLoaderData();
-  const { _id, name } = product;
-  console.log(_id);
+  const { name } = product;
+
   const handleCart = (product) => {
-    if (_id === product._id) {
-      Swal.fire({
-        icon: "error",
-        title: "Sorry!",
-        text: `you have already added ${name} to Cart`,
-        footer: '<a href="/">please choose another one !</a>',
+    fetch("http://localhost:5000/added", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(product),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.insertedId) {
+          Swal.fire({
+            icon: "success",
+            title: "Thank you!",
+            text: `${name} added to Cart`,
+          });
+        } else {
+          Swal.fire({
+            icon: "error",
+            title: "Sorry!",
+            text: `you have already added ${name} to Cart`,
+            footer: '<a href="/">please choose another one !</a>',
+          });
+        }
       });
-      return;
-    } else {
-      fetch("http://localhost:5000/added", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(product),
-      })
-        .then((res) => res.json())
-        .then((data) => {
-          if (data.insertedId) {
-            Swal.fire({
-              icon: "success",
-              title: "Thank you!",
-              text: `${name} added to Cart`,
-            });
-          }
-        });
-    }
   };
   return (
     <div>
-      <div className="mx-20 ">
+      <div className="mx-20 mt-8">
         <img className="  h-80 w-2/4 mx-auto" src={product.photo} alt="" />
       </div>
       <div className=" text-center">
