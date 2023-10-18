@@ -1,4 +1,3 @@
-// import Card from "./Card";
 import { Link } from "react-router-dom";
 const Home = () => {
   return (
@@ -17,7 +16,7 @@ const Home = () => {
         {/* <Card />; */}
         <div className="grid grid-cols-3 gap-8 m-10">
           <Link to={"/card/google"}>
-            <div className="card h-96 bg-base-100 shadow-xl ">
+            <div className="card h-80 bg-base-100 shadow-xl ">
               <figure>
                 <img
                   className="h-64"
@@ -31,7 +30,7 @@ const Home = () => {
             </div>
           </Link>
           <Link to={"/card/apple"}>
-            <div className="card h-96 bg-base-100 shadow-xl">
+            <div className="card h-80 bg-base-100 shadow-xl">
               <figure>
                 <img
                   className="h-64"
@@ -45,7 +44,7 @@ const Home = () => {
             </div>
           </Link>
           <Link to={"/card/sony"}>
-            <div className="card h-96 bg-base-100 shadow-xl">
+            <div className="card h-80 bg-base-100 shadow-xl">
               <figure>
                 <img
                   className="h-64"
@@ -59,7 +58,7 @@ const Home = () => {
             </div>
           </Link>
           <Link to={"/card/samsung"}>
-            <div className="card h-96 bg-base-100 shadow-xl">
+            <div className="card h-80 bg-base-100 shadow-xl">
               <figure>
                 <img
                   className="h-64"
@@ -73,7 +72,7 @@ const Home = () => {
             </div>
           </Link>
           <Link to={"/card/intel"}>
-            <div className="card h-96 bg-base-100 shadow-xl">
+            <div className="card h-80 bg-base-100 shadow-xl">
               <figure>
                 <img
                   className="h-64"
@@ -87,7 +86,7 @@ const Home = () => {
             </div>
           </Link>
           <Link to={"/card/xiaomi"}>
-            <div className="card h-96 bg-base-100 shadow-xl">
+            <div className="card h-80 bg-base-100 shadow-xl">
               <figure>
                 <img
                   className="h-64"

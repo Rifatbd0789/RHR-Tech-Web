@@ -86,7 +86,7 @@ const Updates = () => {
               </div>
               <div className="form-control md:flex-row w-full gap-7">
                 {/* photo */}
-                <div className="md:w-1/2">
+                <div className="w-full">
                   <label className="label">
                     <span className="label-text">Photo URL</span>
                   </label>
@@ -98,63 +98,51 @@ const Updates = () => {
                     className="input input-bordered w-full"
                   />
                 </div>
-                {/* Ratings */}
-                <div className="mx-auto md:mx-0">
-                  <label className="label">
-                    <span className="label-text">Ratings of Product</span>
+              </div>
+              {/* Ratings */}
+              <div className="form-control ">
+                <div className="mx-auto ">
+                  <label className="label ">
+                    <span className="label-text ">Ratings of Product</span>
                   </label>
                   <div className="rating rating-lg">
                     <input
                       type="radio"
-                      name="rating"
-                      value="1"
+                      name="rating-1"
+                      defaultChecked={product.rating === "1"}
                       className="mask mask-star-2 bg-orange-400"
                     />
                     <input
                       type="radio"
-                      name="rating"
-                      value="2"
+                      name="rating-2"
+                      defaultChecked={product.rating === "2"}
                       className="mask mask-star-2 bg-orange-400"
                     />
                     <input
                       type="radio"
-                      name="rating"
-                      value="3"
+                      name="rating-3"
+                      defaultChecked={product.rating === "3"}
                       className="mask mask-star-2 bg-orange-400"
                     />
                     <input
                       type="radio"
-                      name="rating"
-                      value="4"
+                      name="rating-4"
+                      defaultChecked={product.rating === "4"}
                       className="mask mask-star-2 bg-orange-400"
                     />
                     <input
                       type="radio"
-                      name="rating"
-                      value="5"
+                      name="rating-5"
+                      defaultChecked={product.rating === "5"}
                       className="mask mask-star-2 bg-orange-400"
                     />
                   </div>
                 </div>
               </div>
-              <div className="form-control">
-                <div className="w-full">
-                  <label className="label">
-                    <span className="label-text">Short Description</span>
-                  </label>
-
-                  <textarea
-                    placeholder="Short description of your product..."
-                    name="description"
-                    defaultValue={product.description}
-                    className="textarea textarea-bordered  w-full "
-                  ></textarea>
-                </div>
-              </div>
 
               <div className="form-control md:mx-28 mt-6">
-                <button className="btn text-white hover:text-black bg-cyan-500">
-                  Update
+                <button className="btn text-white hover:text-black bg-cyan-500 normal-case">
+                  Submit
                 </button>
               </div>
             </form>

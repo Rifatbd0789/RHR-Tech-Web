@@ -1,7 +1,8 @@
+/* eslint-disable react/prop-types */
 import { NavLink } from "react-router-dom";
 const Brands = ({ product }) => {
   const { _id, name, brand, photo, rating, type, price } = product;
-  // console.log(product);
+  console.log(product);
   return (
     <div>
       {/* Product Card */}
@@ -25,37 +26,37 @@ const Brands = ({ product }) => {
               <div className="rating rating-md">
                 <input
                   type="radio"
-                  name="rating"
-                  value="1"
+                  name="rating-1"
+                  disabled
                   defaultChecked={rating === "1"}
                   className="mask mask-star-2 bg-orange-400"
                 />
                 <input
                   type="radio"
-                  name="rating"
-                  value="2"
+                  name="rating-2"
                   defaultChecked={rating === "2"}
+                  disabled
                   className="mask mask-star-2 bg-orange-400"
                 />
                 <input
                   type="radio"
-                  name="rating"
-                  value="3"
+                  name="rating-3"
                   defaultChecked={rating === "3"}
+                  disabled
                   className="mask mask-star-2 bg-orange-400"
                 />
                 <input
                   type="radio"
-                  name="rating"
-                  value="4"
+                  name="rating-4"
                   defaultChecked={rating === "4"}
+                  disabled
                   className="mask mask-star-2 bg-orange-400"
                 />
                 <input
                   type="radio"
-                  name="rating"
-                  value="5"
+                  name="rating-5"
                   defaultChecked={rating === "5"}
+                  disabled
                   className="mask mask-star-2 bg-orange-400"
                 />
               </div>
