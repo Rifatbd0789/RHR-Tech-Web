@@ -6,10 +6,10 @@ import {
   signInWithPopup,
   signOut,
 } from "firebase/auth";
-import auth from "../../Firebase/firebase.config";
 import { createContext, useEffect, useState } from "react";
 import { GoogleAuthProvider } from "firebase/auth";
 import PropTypes from "prop-types";
+import auth from "../../Firebase/firebase.config";
 
 const provider = new GoogleAuthProvider();
 

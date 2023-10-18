@@ -34,7 +34,7 @@ const Add = () => {
   };
   return (
     <div>
-      <div className="  bg-cyan-500">
+      <div className=" bg-cyan-500 ">
         <div className=" hero-content flex-col mx-10">
           <div className="text-center text-white lg:text-left">
             <h1 className="text-3xl md:text-5xl font-bold">

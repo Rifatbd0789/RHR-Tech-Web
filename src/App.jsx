@@ -4,8 +4,12 @@ import Navbar from "./Components/Shared/Navbar";
 function App() {
   return (
     <>
-      <Navbar></Navbar>
-      <Outlet></Outlet>
+      <div>
+        <Navbar></Navbar>
+        <div>
+          <Outlet></Outlet>
+        </div>
+      </div>
     </>
   );
 }
