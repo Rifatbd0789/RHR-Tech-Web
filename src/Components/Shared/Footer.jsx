@@ -5,7 +5,7 @@ const Footer = () => {
         <aside className="flex justify-center md:justify-normal">
           <img
             className="w-36 rounded-xl"
-            src="https://i.ibb.co/ThyfSfz/a-logo-using-rhr-tech-as-company-name-upscaled.png"
+            src="https://i.ibb.co/DthpYjT/logo.jpg"
             alt=""
           />
         </aside>

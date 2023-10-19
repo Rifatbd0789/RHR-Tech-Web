@@ -191,7 +191,7 @@ const Home = () => {
                     <MdEmail className="text-3xl text-red-500"></MdEmail>
                   </span>
                   <div>
-                    <p className="text-xl ">support@rhr-edu.com</p>
+                    <p className="text-xl ">support@rhr-tech.com</p>
                     <p className="">Send us your query anytime!</p>
                   </div>
                 </div>
@@ -238,7 +238,7 @@ const Home = () => {
                 ></textarea>
               </div>
               <div className="form-control mt-6">
-                <button className="btn btn-xs md:btn-md normal-case border-cyan-500 bg-white  text-cyan-500">
+                <button className="btn btn-xs md:btn-md normal-case border-cyan-500   text-cyan-500">
                   Send
                 </button>
               </div>

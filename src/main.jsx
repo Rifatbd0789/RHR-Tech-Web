@@ -13,11 +13,13 @@ import Details from "./Components/Details.jsx";
 import Updates from "./Components/Updates.jsx";
 import AddProduct from "./Components/AddProduct.jsx";
 import Private from "./Components/Private.jsx";
+import Error from "./Components/Shared/Error.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    errorElement: <Error />,
     children: [
       {
         path: "/",

@@ -93,8 +93,8 @@ const Navbar = () => {
             <div className="avatar w-5 md:w-12">
               <img
                 className="rounded-xl"
-                src="https://i.ibb.co/ThyfSfz/a-logo-using-rhr-tech-as-company-name-upscaled.png"
-                alt=""
+                src="https://i.ibb.co/DthpYjT/logo.jpg"
+                alt="Logo"
               />
             </div>
             <p>RHR-Tech</p>

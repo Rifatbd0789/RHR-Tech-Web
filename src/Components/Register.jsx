@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { useContext, useState } from "react";
 import { updateProfile } from "firebase/auth";
 import { context } from "./ContextProvider/Provider";
@@ -8,6 +8,7 @@ import { FcGoogle } from "react-icons/fc";
 const Register = () => {
   const { createUser, googleLogIn } = useContext(context);
   const [registerError, setRegisterError] = useState("");
+  const location = useLocation();
   const navigate = useNavigate();
   const handleRegister = (e) => {
     e.preventDefault();
