@@ -7,7 +7,7 @@ const Brands = ({ product }) => {
     <div>
       {/* Product Card */}
       {
-        <div className="card h-[500px] text-white flex-col  bg-cyan-500 shadow-xl">
+        <div className="card  text-white flex-col  bg-cyan-500 shadow-xl">
           <figure>
             <img className="w-full rounded-t-2xl" src={photo} alt="Movie" />
           </figure>
@@ -57,7 +57,7 @@ const Brands = ({ product }) => {
               />
             </div>
 
-            <div className="flex gap-2 flex-row justify-center">
+            <div className="flex gap-2 flex-col md:flex-row justify-center">
               <NavLink to={`/card/update/${_id}`}>
                 <button className="btn  bg-cyan-500 text-white hover:text-black hover:bg-white">
                   Update

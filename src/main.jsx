@@ -4,15 +4,15 @@ import App from "./App.jsx";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./Components/Home.jsx";
-import Add from "./Components/Add.jsx";
+
 import Cart from "./Components/Cart.jsx";
 import Card from "./Components/Card.jsx";
 import Login from "./Components/Login.jsx";
 import Register from "./Components/Register.jsx";
 import Provider from "./Components/ContextProvider/Provider.jsx";
-// import Brands from "./Components/Brands.jsx";
 import Details from "./Components/Details.jsx";
 import Updates from "./Components/Updates.jsx";
+import AddProduct from "./Components/AddProduct.jsx";
 
 const router = createBrowserRouter([
   {
@@ -25,7 +25,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/add",
-        element: <Add />,
+        element: <AddProduct />,
       },
       {
         path: "/cart",

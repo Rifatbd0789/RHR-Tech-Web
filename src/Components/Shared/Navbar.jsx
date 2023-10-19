@@ -13,7 +13,7 @@ const Navbar = () => {
         <NavLink
           to="/"
           className={({ isActive }) =>
-            isActive ? " border border-offset-4 " : ""
+            isActive ? " border border-offset-4 border-cyan-500 " : ""
           }
         >
           Home
@@ -23,7 +23,7 @@ const Navbar = () => {
         <NavLink
           to="/add"
           className={({ isActive }) =>
-            isActive ? " border border-offset-4 decoration-white " : ""
+            isActive ? " border border-offset-4 border-cyan-500 " : ""
           }
         >
           Add Product
@@ -33,7 +33,7 @@ const Navbar = () => {
         <NavLink
           to="/cart"
           className={({ isActive }) =>
-            isActive ? " border border-offset-4 decoration-white " : ""
+            isActive ? " border border-offset-4 border-cyan-500 " : ""
           }
         >
           My Cart
@@ -60,7 +60,7 @@ const Navbar = () => {
   }, [theme]);
   return (
     <div>
-      <div className="navbar bg-cyan-500 text-white">
+      <div className="navbar bg-base-200 text-cyan-500">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -131,7 +131,7 @@ const Navbar = () => {
               />
               <NavLink
                 onClick={handleLogOut}
-                className="btn btn-xs md:btn-md normal-case bg-cyan-500 text-white hover:text-black"
+                className="btn btn-xs md:btn-md normal-case border-cyan-500  text-cyan-500 "
               >
                 Log Out
               </NavLink>
@@ -140,7 +140,7 @@ const Navbar = () => {
             <>
               <NavLink
                 to={"/login"}
-                className="btn normal-case bg-cyan-500 text-white hover:text-black"
+                className="btn btn-xs md:btn-md normal-case border-cyan-500  text-cyan-500"
               >
                 Login
               </NavLink>

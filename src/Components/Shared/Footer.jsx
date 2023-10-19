@@ -1,22 +1,29 @@
 const Footer = () => {
   return (
     <div>
-      <footer className="footer footer-center p-10 bg-cyan-500 text-white">
-        <aside>
+      <footer className="flex flex-col md:flex-row text-center               justify-center md:justify-between mx-10  p-10  text-cyan-500">
+        <aside className="flex justify-center md:justify-normal">
           <img
-            className="w-16 rounded-xl"
+            className="w-36 rounded-xl"
             src="https://i.ibb.co/ThyfSfz/a-logo-using-rhr-tech-as-company-name-upscaled.png"
             alt=""
           />
-          <p>
-            ACME Industries Ltd.
+        </aside>
+        <div>
+          <p className="footer-title">
+            <span className="font-extrabold">RHR-Tech</span>
+            <br />
+            RHR Industries Ltd.
             <br />
             Providing reliable tech since 1992
           </p>
-        </aside>
+          <aside className="footer footer-center p-4 text-cyan-500">
+            <p>Copyright © 2023 - All right reserved by RHR Industries Ltd</p>
+          </aside>
+        </div>
         <nav>
-          <header className="footer-title">Social</header>
-          <div className="grid grid-flow-col gap-4">
+          <header className="footer-title">Socials</header>
+          <div className="flex justify-center gap-6">
             <a>
               <svg
                 xmlns="http://www.w3.org/2000/svg"

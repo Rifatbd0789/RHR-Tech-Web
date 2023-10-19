@@ -1,6 +1,6 @@
 import Swal from "sweetalert2";
 
-const Add = () => {
+const AddProduct = () => {
   const handleAddData = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -186,4 +186,4 @@ const Add = () => {
   );
 };
 
-export default Add;
+export default AddProduct;
