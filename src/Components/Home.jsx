@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import Footer from "./Shared/Footer";
 import { FcHome, FcPhone } from "react-icons/fc";
 import { MdEmail } from "react-icons/md";
+import Customer from "./Customer";
 const Home = () => {
   return (
     <div className="bg-base-200">
@@ -114,10 +115,10 @@ const Home = () => {
       {/* About Us */}
       <div>
         <h1 className="  text-center mx-10 border-4 p-2 border-cyan-500 my-5  text-5xl font-bold text-cyan-500 rounded-xl">
-          About Us !
+          About Us
         </h1>
-        <div className="mx-20 text-clip gap-20 grid grid-flow-row md:grid-flow-col  justify-between">
-          <p className="">
+        <div className="mx-20 mb-5 text-clip gap-20 grid grid-flow-row md:grid-flow-col  justify-between">
+          <p className="indent-2">
             <span className="text-cyan-500 text-3xl border-l-2 border-l-cyan-500 pl-2">
               R
             </span>
@@ -130,12 +131,7 @@ const Home = () => {
             delivering products known for their reliability, performance, and
             durability. Quality is at the heart of everything we doOur product
             philosophy centers on user experience, affordability, and staying at
-            the forefront of technological advancements. We believe that
-            technology should be accessible to everyone.Our team brings together
-            decades of collective experience in the tech industry, from software
-            development to hardware engineering.RHR Tech is dedicated to staying
-            at the forefront of innovation, continuously exploring emerging
-            technologies to bring you the best.We are committed to
+            the forefront of technological advancements. We are committed to
             sustainability through eco-friendly packaging and responsible
             sourcing. Our commitment extends to community support, with a
             focus.RHR Tech is proud to partner with industry leaders such as to
@@ -150,6 +146,15 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <hr className="p-2 bg-base-300" />
+      {/* Customers Review */}
+      <h1 className="  text-center mx-10 border-4 p-2 border-cyan-500 my-5  text-5xl font-bold text-cyan-500 rounded-xl">
+        Customers Review
+      </h1>
+      <div>
+        <Customer />
+      </div>
+
       <hr className="p-2 bg-base-300" />
       {/* Contact Us */}
       <h1 className="  text-center mx-10 border-4 p-2 border-cyan-500 my-5  text-5xl font-bold text-cyan-500 rounded-xl">
