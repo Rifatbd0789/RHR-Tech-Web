@@ -4,7 +4,6 @@ import App from "./App.jsx";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./Components/Home.jsx";
-
 import Cart from "./Components/Cart.jsx";
 import Card from "./Components/Card.jsx";
 import Login from "./Components/Login.jsx";

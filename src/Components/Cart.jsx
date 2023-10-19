@@ -37,26 +37,32 @@ const Cart = () => {
   };
   return (
     <div>
-      <div>
+      <h1 className="  text-center mx-10 border-4 p-2 border-cyan-500 my-5  text-3xl font-bold text-cyan-500 rounded-xl">
+        My Added products !
+      </h1>
+      {/* <hr className="p-2 bg-base-300" /> */}
+      <div className="grid grid-cols-1 md:grid-cols-2">
         {products.map((product) => (
           <div key={product._id}>
-            <div className=" m-10 bg-base-200 rounded-lg">
+            <div className=" m-10 bg-base-200 rounded-lg ">
               <div className="hero-content flex-col lg:flex-row  justify-normal">
-                <img
-                  src={product.photo}
-                  className="max-w-lg w-full rounded-lg shadow-2xl "
-                />
+                <div>
+                  <img
+                    src={product.photo}
+                    className=" h-60 rounded-lg shadow-2xl "
+                  />
+                </div>
                 <div className="text-center w-1/2">
-                  <h1 className="text-5xl font-bold">{product.name}</h1>
+                  <h1 className="text-2xl font-semibold">{product.name}</h1>
                   <h1 className="py-2">
                     Brand:
-                    <span className="text-xl font-bold capitalize">
+                    <span className="text-xl font-medium capitalize">
                       {product.brand}
                     </span>
                   </h1>
                   <p className="pb-6">Price: {product.price}$</p>
                   {/* Rating */}
-                  <div className="rating rating-md">
+                  <div className="rating rating-md block">
                     <input
                       type="radio"
                       name="rating-1"
@@ -93,7 +99,6 @@ const Cart = () => {
                       className="mask mask-star-2 bg-orange-400"
                     />
                   </div>
-                  <p className="py-6">{product.description}</p>
                   <button
                     onClick={() => handleDelete(product._id)}
                     className="btn normal-case bg-cyan-500 text-white hover:text-black hover:bg-white"

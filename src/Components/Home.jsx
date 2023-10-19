@@ -17,7 +17,7 @@ const Home = () => {
       <hr className="p-2 bg-base-300" />
       {/* product card */}
       <div>
-        <h1 className="  text-center mx-10 border-4 p-2 border-cyan-500 my-5  text-5xl font-bold text-cyan-500 rounded-2xl">
+        <h1 className="  text-center mx-10 border-4 p-2 border-cyan-500 my-5  text-5xl font-bold text-cyan-500 rounded-xl">
           Brands
         </h1>
         {/* <Card />; */}
@@ -113,7 +113,7 @@ const Home = () => {
       <hr className="p-2 bg-base-300" />
       {/* About Us */}
       <div>
-        <h1 className="  text-center mx-10 border-4 p-2 border-cyan-500 my-5  text-5xl font-bold text-cyan-500 rounded-2xl">
+        <h1 className="  text-center mx-10 border-4 p-2 border-cyan-500 my-5  text-5xl font-bold text-cyan-500 rounded-xl">
           About Us !
         </h1>
         <div className="mx-20 text-clip gap-20 grid grid-flow-row md:grid-flow-col  justify-between">
@@ -141,10 +141,10 @@ const Home = () => {
             focus.RHR Tech is proud to partner with industry leaders such as to
             provide you with the latest technology.
           </p>
-          <div className="">
+          <div className="my-auto">
             <img
-              className="w-72 "
-              src="https://i.ibb.co/ThyfSfz/a-logo-using-rhr-tech-as-company-name-upscaled.png"
+              className="w-full h-[320px]"
+              src="https://i.ibb.co/VY7XqMr/download-5.jpg"
               alt=""
             />
           </div>
@@ -152,10 +152,10 @@ const Home = () => {
       </div>
       <hr className="p-2 bg-base-300" />
       {/* Contact Us */}
-      <h1 className="  text-center mx-10 border-4 p-2 border-cyan-500 my-5  text-5xl font-bold text-cyan-500 rounded-2xl">
+      <h1 className="  text-center mx-10 border-4 p-2 border-cyan-500 my-5  text-5xl font-bold text-cyan-500 rounded-xl">
         Contact Us !
       </h1>
-      <div className="flex flex-col md:flex-row justify-around  bg-cyan-500 rounded-2xl mx-5 md:mx-20 py-8">
+      <div className="flex flex-col md:flex-row justify-around  bg-cyan-500 rounded-2xl mx-5 mb-5 md:mx-20 py-8">
         {/* left side */}
         <div className=" flex py-5 rounded-xl  justify-center    bg-cyan-500 ">
           <div className="card px-10  max-w-2xl shadow-2xl bg-base-100">
@@ -238,7 +238,7 @@ const Home = () => {
                 ></textarea>
               </div>
               <div className="form-control mt-6">
-                <button className="btn btn-xs md:btn-md normal-case border-cyan-500  text-cyan-500">
+                <button className="btn btn-xs md:btn-md normal-case border-cyan-500 bg-white  text-cyan-500">
                   Send
                 </button>
               </div>
@@ -248,6 +248,7 @@ const Home = () => {
       </div>
       {/* footer */}
       <div>
+        <hr className="p-2 bg-base-300 " />
         <Footer />
       </div>
     </div>

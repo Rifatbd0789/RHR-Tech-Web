@@ -33,22 +33,68 @@ const Details = () => {
   };
   return (
     <div>
-      <div className="mx-20 mt-8">
-        <img className="  h-80 w-2/4 mx-auto" src={photo} alt="" />
-      </div>
-      <div className=" text-center">
+      <div className="mx-20 mt-8 grid grid-cols-2">
         <div>
-          <h1 className="text-3xl font-bold">{name}</h1>
-          <h2 className="text-2xl font-semibold">{brand}</h2>
-          <p className="p-2">Only {price}/=</p>
-          <p>{description}</p>
-          <div>
-            <button
-              onClick={() => handleCart(newProduct)}
-              className="btn  bg-cyan-500 text-white hover:text-black hover:bg-white"
-            >
-              Add to Cart
-            </button>
+          <img className=" w-2/3 mx-auto" src={photo} alt="" />
+          <div className="text-center w-full">
+            <h1 className="text-5xl font-bold">{name}</h1>
+          </div>
+        </div>
+
+        <div>
+          <div className="text-left">
+            <h1 className="py-2">
+              Brand:
+              <span className="text-xl font-bold capitalize">{brand}</span>
+            </h1>
+            <p className="pb-6">Price: {price}$</p>
+            {/* Rating */}
+            <div className="rating rating-md">
+              <input
+                type="radio"
+                name="rating-1"
+                disabled
+                defaultChecked={rating === "1"}
+                className="mask mask-star-2 bg-orange-400"
+              />
+              <input
+                type="radio"
+                name="rating-2"
+                defaultChecked={rating === "2"}
+                disabled
+                className="mask mask-star-2 bg-orange-400"
+              />
+              <input
+                type="radio"
+                name="rating-3"
+                defaultChecked={rating === "3"}
+                disabled
+                className="mask mask-star-2 bg-orange-400"
+              />
+              <input
+                type="radio"
+                name="rating-4"
+                defaultChecked={rating === "4"}
+                disabled
+                className="mask mask-star-2 bg-orange-400"
+              />
+              <input
+                type="radio"
+                name="rating-5"
+                defaultChecked={rating === "5"}
+                disabled
+                className="mask mask-star-2 bg-orange-400"
+              />
+            </div>
+            <p className="py-6">{description}</p>
+            <div>
+              <button
+                onClick={() => handleCart(newProduct)}
+                className="btn  bg-cyan-500 text-white hover:text-black hover:bg-white"
+              >
+                Add to Cart
+              </button>
+            </div>
           </div>
         </div>
       </div>

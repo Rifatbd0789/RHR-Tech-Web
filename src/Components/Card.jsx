@@ -1,21 +1,40 @@
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useParams } from "react-router-dom";
 import Brands from "./Brands";
 import Slider from "./Shared/Slider";
 import Footer from "./Shared/Footer";
 
 const Card = () => {
   const products = useLoaderData();
-
+  const brand = useParams();
   return (
     <div>
       <Slider></Slider>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 my-8 mx-16 md:mx-36 gap-10">
-        {products.length !== 0
-          ? products.map((product) => (
+      <h1 className="  text-center mx-10 border-4 p-2 border-cyan-500 my-5  text-5xl font-bold text-cyan-500 rounded-xl capitalize">
+        {brand.brand} products
+      </h1>
+      {products.length !== 0 ? (
+        <>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  my-8 mx-16 md:mx-20 gap-10">
+            {products.map((product) => (
               <Brands key={product._id} product={product} />
-            ))
-          : alert("sorry no data found !") || console.log("sorry")}
-      </div>
+            ))}
+          </div>
+        </>
+      ) : (
+        <>
+          <div className="text-center my-10">
+            <p className="text-4xl text-red-500 font-bold">Sorry !</p>
+            <p className="text-2xl text-red-500 font-semibold">
+              The Brand Products you are looking for is out of stock now
+            </p>
+            <p className="text-xl text-red-500 font-semibold">
+              Hope it will restock soon !
+            </p>
+            <p className="text-cyan-500 text-lg">Happy Shopping !</p>
+          </div>
+        </>
+      )}
+
       <Footer />
     </div>
   );

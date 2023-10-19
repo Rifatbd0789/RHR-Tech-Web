@@ -86,8 +86,11 @@ const Navbar = () => {
               {Links}
             </ul>
           </div>
-          <Link to="/" className="btn btn-ghost normal-case text-xl">
-            <div className="avatar w-12">
+          <Link
+            to="/"
+            className="btn btn-ghost btn-xs md:btn-md normal-case text-lg md:text-xl"
+          >
+            <div className="avatar w-5 md:w-12">
               <img
                 className="rounded-xl"
                 src="https://i.ibb.co/ThyfSfz/a-logo-using-rhr-tech-as-company-name-upscaled.png"
@@ -100,7 +103,7 @@ const Navbar = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{Links}</ul>
         </div>
-        <label className="swap swap-rotate">
+        <label className="swap swap-rotate mx-2">
           {/* this hidden checkbox controls the state */}
           <input type="checkbox" onChange={handleToggle} />
           {/* sun icon */}
@@ -125,7 +128,7 @@ const Navbar = () => {
             <>
               <p className="text-xs md:text-xl">{user?.displayName}</p>
               <img
-                className="w-12 rounded-full mr-3"
+                className="w-12 rounded-full mr-2"
                 src={user?.photoURL}
                 alt=""
               />
