@@ -40,7 +40,10 @@ const router = createBrowserRouter([
             <Cart />
           </Private>
         ),
-        loader: () => fetch("http://localhost:5000/added"),
+        loader: () =>
+          fetch(
+            "https://rhr-tech-server-381gfsv7f-rifat-hossains-projects.vercel.app/added"
+          ),
       },
       {
         path: "/login",
@@ -54,7 +57,9 @@ const router = createBrowserRouter([
         path: "/card/:brand",
         element: <Card />,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/products/${params.brand}`),
+          fetch(
+            `https://rhr-tech-server-381gfsv7f-rifat-hossains-projects.vercel.app/products/${params.brand}`
+          ),
       },
       {
         path: "/card/brand/:id",
@@ -64,7 +69,9 @@ const router = createBrowserRouter([
           </Private>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/products/brand/${params.id}`),
+          fetch(
+            `https://rhr-tech-server-381gfsv7f-rifat-hossains-projects.vercel.app/products/brand/${params.id}`
+          ),
       },
       {
         path: "/card/update/:id",
@@ -74,7 +81,9 @@ const router = createBrowserRouter([
           </Private>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/products/brand/${params.id}`),
+          fetch(
+            `https://rhr-tech-server-381gfsv7f-rifat-hossains-projects.vercel.app/products/brand/${params.id}`
+          ),
       },
     ],
   },

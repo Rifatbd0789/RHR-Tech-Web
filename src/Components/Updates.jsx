@@ -16,13 +16,16 @@ const Updates = () => {
     const updatedProducts = { name, brand, type, price, photo, rating };
     console.log(updatedProducts);
 
-    fetch(`http://localhost:5000/products/${_id}`, {
-      method: "PUT",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(updatedProducts),
-    })
+    fetch(
+      `https://rhr-tech-server-381gfsv7f-rifat-hossains-projects.vercel.app/products/${_id}`,
+      {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(updatedProducts),
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         if (data.modifiedCount > 0) {

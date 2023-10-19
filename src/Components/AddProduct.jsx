@@ -13,13 +13,16 @@ const AddProduct = () => {
     const description = form.description.value;
     const newProduct = { name, brand, type, price, photo, rating, description };
     // console.log(newProduct);
-    fetch("http://localhost:5000/products", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(newProduct),
-    })
+    fetch(
+      "https://rhr-tech-server-381gfsv7f-rifat-hossains-projects.vercel.app/products",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(newProduct),
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         if (data.insertedId) {
