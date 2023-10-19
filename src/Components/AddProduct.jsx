@@ -174,7 +174,7 @@ const AddProduct = () => {
               </div>
 
               <div className="form-control md:mx-28 mt-6">
-                <button className="btn text-white hover:text-black bg-cyan-500">
+                <button className="btn normal-case text-white hover:text-black bg-cyan-500">
                   Add
                 </button>
               </div>

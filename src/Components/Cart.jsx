@@ -62,7 +62,7 @@ const Cart = () => {
                   </h1>
                   <p className="pb-6">Price: {product.price}$</p>
                   {/* Rating */}
-                  <div className="rating rating-md block">
+                  {/* <div className="rating rating-md block">
                     <input
                       type="radio"
                       name="rating-1"
@@ -98,7 +98,7 @@ const Cart = () => {
                       disabled
                       className="mask mask-star-2 bg-orange-400"
                     />
-                  </div>
+                  </div> */}
                   <button
                     onClick={() => handleDelete(product._id)}
                     className="btn normal-case bg-cyan-500 text-white hover:text-black hover:bg-white"

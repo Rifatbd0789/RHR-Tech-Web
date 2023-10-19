@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable react-refresh/only-export-components */
 import {
   createUserWithEmailAndPassword,
@@ -8,7 +9,6 @@ import {
 } from "firebase/auth";
 import { createContext, useEffect, useState } from "react";
 import { GoogleAuthProvider } from "firebase/auth";
-import PropTypes from "prop-types";
 import auth from "../../Firebase/firebase.config";
 
 const provider = new GoogleAuthProvider();
@@ -55,10 +55,6 @@ const Provider = ({ children }) => {
     googleLogIn,
   };
   return <context.Provider value={authInfo}>{children}</context.Provider>;
-};
-
-Provider.propTypes = {
-  children: PropTypes.node,
 };
 
 export default Provider;

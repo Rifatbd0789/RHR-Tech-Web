@@ -12,6 +12,7 @@ import Provider from "./Components/ContextProvider/Provider.jsx";
 import Details from "./Components/Details.jsx";
 import Updates from "./Components/Updates.jsx";
 import AddProduct from "./Components/AddProduct.jsx";
+import Private from "./Components/Private.jsx";
 
 const router = createBrowserRouter([
   {
@@ -24,11 +25,19 @@ const router = createBrowserRouter([
       },
       {
         path: "/add",
-        element: <AddProduct />,
+        element: (
+          <Private>
+            <AddProduct />
+          </Private>
+        ),
       },
       {
         path: "/cart",
-        element: <Cart />,
+        element: (
+          <Private>
+            <Cart />
+          </Private>
+        ),
         loader: () => fetch("http://localhost:5000/added"),
       },
       {
@@ -47,13 +56,21 @@ const router = createBrowserRouter([
       },
       {
         path: "/card/brand/:id",
-        element: <Details />,
+        element: (
+          <Private>
+            <Details />
+          </Private>
+        ),
         loader: ({ params }) =>
           fetch(`http://localhost:5000/products/brand/${params.id}`),
       },
       {
         path: "/card/update/:id",
-        element: <Updates />,
+        element: (
+          <Private>
+            <Updates />
+          </Private>
+        ),
         loader: ({ params }) =>
           fetch(`http://localhost:5000/products/brand/${params.id}`),
       },

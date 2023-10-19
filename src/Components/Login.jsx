@@ -73,7 +73,7 @@ const Login = () => {
                 <label className="label">
                   <Link to="/register">
                     New Here? please
-                    <span className=" text-blue-600 link link-hover">
+                    <span className=" text-blue-600 link link-hover mx-1">
                       Register Here
                     </span>
                   </Link>

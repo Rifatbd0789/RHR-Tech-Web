@@ -25,10 +25,10 @@ const Card = () => {
           <div className="text-center my-10">
             <p className="text-4xl text-red-500 font-bold">Sorry !</p>
             <p className="text-2xl text-red-500 font-semibold">
-              The Brand Products you are looking for is out of stock now
+              This Brand Products are out of stock now !
             </p>
             <p className="text-xl text-red-500 font-semibold">
-              Hope it will restock soon !
+              It will restock soon !
             </p>
             <p className="text-cyan-500 text-lg">Happy Shopping !</p>
           </div>

@@ -45,9 +45,11 @@ const Details = () => {
           <div className="text-left">
             <h1 className="py-2">
               Brand:
-              <span className="text-xl font-bold capitalize">{brand}</span>
+              <span className="text-xl font-bold capitalize"> {brand}</span>
             </h1>
-            <p className="pb-6">Price: {price}$</p>
+            <p className="pb-6">
+              Price: <span className=" font-bold capitalize">{price}</span>$
+            </p>
             {/* Rating */}
             <div className="rating rating-md">
               <input
