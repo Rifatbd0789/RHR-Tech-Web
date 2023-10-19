@@ -123,7 +123,7 @@ const Register = () => {
                 <p className="text-red-600 font-semibold">{registerError}</p>
               )}
               <div className="form-control mt-6">
-                <p className="mb-2">
+                <p className="mb-3">
                   Already Have an account ?{" "}
                   <Link to={"/login"}>
                     <span className="text-blue-600 link link-hover mb-2">

@@ -18,14 +18,14 @@ const Home = () => {
       <hr className="p-2 bg-base-300" />
       {/* product card */}
       <div>
-        <h1 className="  text-center mx-10 border-4 p-2 border-cyan-500 my-5  text-5xl font-bold text-cyan-500 rounded-xl">
+        <h1 className="  text-center mx-10 border-4 p-2 border-cyan-500 my-5  text-xl md:text-5xl font-bold text-cyan-500 rounded-xl">
           Brands
         </h1>
         {/* <Card />; */}
-        <div className="mx-20">
+        <div className="mx-5 md:mx-20">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-8 mx-auto my-10">
             <Link to={"/card/google"}>
-              <div className="card h-72 bg-base-100 shadow-xl ">
+              <div className="card h-[232px] md:h-72 bg-base-100 shadow-xl ">
                 <figure>
                   <img
                     className="w-full"
@@ -39,7 +39,7 @@ const Home = () => {
               </div>
             </Link>
             <Link to={"/card/apple"}>
-              <div className="card h-72 bg-base-100 shadow-xl">
+              <div className="card md:h-72 bg-base-100 shadow-xl">
                 <figure>
                   <img
                     className="w-full"
@@ -53,7 +53,7 @@ const Home = () => {
               </div>
             </Link>
             <Link to={"/card/sony"}>
-              <div className="card h-72 bg-base-100 shadow-xl">
+              <div className="card h-[232px] md:h-72 bg-base-100 shadow-xl">
                 <figure>
                   <img
                     className="w-full"
@@ -67,7 +67,7 @@ const Home = () => {
               </div>
             </Link>
             <Link to={"/card/samsung"}>
-              <div className="card h-72 bg-base-100 shadow-xl">
+              <div className="card h-[232px] md:h-72 bg-base-100 shadow-xl">
                 <figure>
                   <img
                     className="w-full"
@@ -81,7 +81,7 @@ const Home = () => {
               </div>
             </Link>
             <Link to={"/card/intel"}>
-              <div className="card h-72 bg-base-100 shadow-xl">
+              <div className="card h-[232px] md:h-72 bg-base-100 shadow-xl">
                 <figure>
                   <img
                     className="w-full"
@@ -95,7 +95,7 @@ const Home = () => {
               </div>
             </Link>
             <Link to={"/card/xiaomi"}>
-              <div className="card h-72 bg-base-100 shadow-xl">
+              <div className="card h-[232px] md:h-72 bg-base-100 shadow-xl">
                 <figure>
                   <img
                     className="w-full"
@@ -114,10 +114,10 @@ const Home = () => {
       <hr className="p-2 bg-base-300" />
       {/* About Us */}
       <div>
-        <h1 className="  text-center mx-10 border-4 p-2 border-cyan-500 my-5  text-5xl font-bold text-cyan-500 rounded-xl">
+        <h1 className="  text-center mx-10 border-4 p-2 border-cyan-500 my-5  text-xl md:text-5xl font-bold text-cyan-500 rounded-xl">
           About Us
         </h1>
-        <div className="mx-20 mb-5 text-clip gap-20 grid grid-flow-row md:grid-flow-col  justify-between">
+        <div className="mx-5 lg:mx-20 mb-5 text-clip gap-20 grid grid-flow-row md:grid-flow-col  justify-between">
           <p className="indent-2">
             <span className="text-cyan-500 text-3xl border-l-2 border-l-cyan-500 pl-2">
               R
@@ -148,7 +148,7 @@ const Home = () => {
       </div>
       <hr className="p-2 bg-base-300" />
       {/* Customers Review */}
-      <h1 className="  text-center mx-10 border-4 p-2 border-cyan-500 my-5  text-5xl font-bold text-cyan-500 rounded-xl">
+      <h1 className="  text-center mx-10 border-4 p-2 border-cyan-500 my-5  text-xl md:text-5xl font-bold text-cyan-500 rounded-xl">
         Customers Review
       </h1>
       <div>
@@ -157,14 +157,14 @@ const Home = () => {
 
       <hr className="p-2 bg-base-300" />
       {/* Contact Us */}
-      <h1 className="  text-center mx-10 border-4 p-2 border-cyan-500 my-5  text-5xl font-bold text-cyan-500 rounded-xl">
+      <h1 className="  text-center mx-10 border-4 p-2 border-cyan-500 my-5  text-xl md:text-5xl font-bold text-cyan-500 rounded-xl">
         Contact Us !
       </h1>
-      <div className="flex flex-col md:flex-row justify-around  bg-cyan-500 rounded-2xl mx-5 mb-5 md:mx-20 py-8">
+      <div className="flex flex-col md:flex-row justify-around  bg-cyan-500 rounded-2xl  mb-5 mx-1 lg:mx-20 py-8">
         {/* left side */}
         <div className=" flex py-5 rounded-xl  justify-center    bg-cyan-500 ">
-          <div className="card px-10  max-w-2xl shadow-2xl bg-base-100">
-            <div className="card-body">
+          <div className="card px-0 md:px-10  max-w-sm md:max-w-2xl shadow-2xl bg-base-100">
+            <div className="card-body px-4 md:px-8">
               <h2 className=" underline underline-offset-4 text-center text-2xl font-medium text-cyan-500">
                 Visit Us !
               </h2>

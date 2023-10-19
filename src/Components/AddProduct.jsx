@@ -35,11 +35,9 @@ const AddProduct = () => {
   return (
     <div>
       <div className=" bg-cyan-500 ">
-        <div className=" hero-content flex-col mx-10">
+        <div className=" hero-content flex-col md:mx-10">
           <div className="text-center text-white lg:text-left">
-            <h1 className="text-3xl md:text-5xl font-bold">
-              Add your product!
-            </h1>
+            <h1 className="text-2xl md:text-5xl font-bold">Add product!</h1>
           </div>
           <div className="card  w-full  shadow-2xl bg-base-100">
             <form onSubmit={handleAddData} className="card-body">

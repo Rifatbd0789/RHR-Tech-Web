@@ -63,7 +63,10 @@ const Navbar = () => {
       <div className="navbar bg-base-200 text-cyan-500">
         <div className="navbar-start">
           <div className="dropdown">
-            <label tabIndex={0} className="btn btn-ghost lg:hidden">
+            <label
+              tabIndex={0}
+              className="btn btn-ghost btn-xs p-0 pt-2 pr-1 lg:hidden"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
@@ -88,7 +91,7 @@ const Navbar = () => {
           </div>
           <Link
             to="/"
-            className="btn btn-ghost btn-xs md:btn-md normal-case text-lg md:text-xl"
+            className="btn p-0 btn-ghost btn-xs md:btn-md normal-case text-lg md:text-xl"
           >
             <div className="avatar w-5 md:w-12">
               <img
@@ -108,7 +111,7 @@ const Navbar = () => {
           <input type="checkbox" onChange={handleToggle} />
           {/* sun icon */}
           <svg
-            className="swap-on fill-current w-8 h-8"
+            className="swap-on fill-current w-6 md:w-8 h-6 md:h-8"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
           >
@@ -116,7 +119,7 @@ const Navbar = () => {
           </svg>
           {/* moon icon */}
           <svg
-            className="swap-off fill-current w-8 h-8"
+            className="swap-off fill-current w-6 md:w-8 h-6 md:h-8"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
           >
@@ -128,7 +131,7 @@ const Navbar = () => {
             <>
               <p className="text-xs md:text-xl">{user?.displayName}</p>
               <img
-                className="w-12 rounded-full mr-2"
+                className="w-6 md:w-12 rounded-full mr-2"
                 src={user?.photoURL}
                 alt=""
               />

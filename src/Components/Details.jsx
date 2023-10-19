@@ -33,7 +33,7 @@ const Details = () => {
   };
   return (
     <div>
-      <div className="mx-20 mt-8 grid grid-cols-2">
+      <div className="mx-5 md:mx-20 mt-8 grid md:grid-cols-2">
         <div>
           <img className=" w-2/3 mx-auto" src={photo} alt="" />
           <div className="text-center w-full">
@@ -42,7 +42,7 @@ const Details = () => {
         </div>
 
         <div>
-          <div className="text-left">
+          <div className=" text-center md:text-left">
             <h1 className="py-2">
               Brand:
               <span className="text-xl font-bold capitalize"> {brand}</span>

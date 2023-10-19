@@ -9,12 +9,12 @@ const Brands = ({ product }) => {
       <div className="card  text-white flex-col  bg-cyan-500 shadow-xl">
         <figure>
           <img
-            className="w-full h-56 p-2 rounded-t-2xl"
+            className="w-full h-80 md:h-72 lg:h-56 p-2 rounded-t-2xl"
             src={photo}
             alt="Movie"
           />
         </figure>
-        <div className="card-body py-3 text-center h-80 lg:h-72 ">
+        <div className="card-body py-3 text-center h-80 md:h-60 lg:h-72 ">
           <h2 className="card-title justify-center "> {name}</h2>
           <h2 className="capitalize">Brand: {brand}</h2>
           {/* <p>{description}</p> */}

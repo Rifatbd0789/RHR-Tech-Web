@@ -37,14 +37,14 @@ const Cart = () => {
   };
   return (
     <div>
-      <h1 className="  text-center mx-10 border-4 p-2 border-cyan-500 my-5  text-3xl font-bold text-cyan-500 rounded-xl">
-        My Added products !
+      <h1 className="  text-center mx-10 border-4 p-2 border-cyan-500 my-5    text-xl md:text-3xl font-bold text-cyan-500 rounded-xl">
+        My Added products
       </h1>
       {/* <hr className="p-2 bg-base-300" /> */}
       <div className="grid grid-cols-1 md:grid-cols-2">
         {products.map((product) => (
           <div key={product._id}>
-            <div className=" m-10 bg-base-200 rounded-lg ">
+            <div className=" m-5 md:m-10 bg-base-200 rounded-2xl ">
               <div className="hero-content flex-col lg:flex-row  justify-normal">
                 <div>
                   <img

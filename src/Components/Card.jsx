@@ -9,12 +9,12 @@ const Card = () => {
   return (
     <div>
       <Slider></Slider>
-      <h1 className="  text-center mx-10 border-4 p-2 border-cyan-500 my-5  text-5xl font-bold text-cyan-500 rounded-xl capitalize">
+      <h1 className="  text-center mx-10 border-4 p-2 border-cyan-500 my-5  text-xl md:text-5xl font-bold text-cyan-500 rounded-xl capitalize">
         {brand.brand} products
       </h1>
       {products.length !== 0 ? (
         <>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  my-8 mx-16 md:mx-20 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  my-8 mx-8 md:mx-20 gap-10">
             {products.map((product) => (
               <Brands key={product._id} product={product} />
             ))}
