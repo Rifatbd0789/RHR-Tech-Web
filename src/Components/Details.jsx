@@ -6,16 +6,13 @@ const Details = () => {
   const { name, photo, brand, price, description, rating, type } = product;
   const newProduct = { name, photo, brand, price, description, rating, type };
   const handleCart = (newProduct) => {
-    fetch(
-      "https://rhr-tech-server-381gfsv7f-rifat-hossains-projects.vercel.app/added",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(newProduct),
-      }
-    )
+    fetch("https://rhr-tech-server.vercel.app/added", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(newProduct),
+    })
       .then((res) => res.json())
       .then((data) => {
         if (data.insertedId) {

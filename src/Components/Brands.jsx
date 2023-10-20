@@ -2,7 +2,6 @@
 import { NavLink } from "react-router-dom";
 const Brands = ({ product }) => {
   const { _id, name, brand, photo, rating, type, price } = product;
-  // console.log(product);
   return (
     <div>
       {/* Product Card */}

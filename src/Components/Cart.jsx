@@ -17,12 +17,9 @@ const Cart = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(
-          `https://rhr-tech-server-381gfsv7f-rifat-hossains-projects.vercel.app/added/${id}`,
-          {
-            method: "DELETE",
-          }
-        )
+        fetch(`https://rhr-tech-server.vercel.app/added/${id}`, {
+          method: "DELETE",
+        })
           .then((res) => res.json())
           .then((data) => {
             if (data.deletedCount > 0) {

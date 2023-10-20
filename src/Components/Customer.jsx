@@ -5,19 +5,19 @@ const Customer = () => {
     <div>
       <Marquee speed={100} pauseOnHover>
         <div className="text-center">
-          <div className=" grid grid-cols-4 gap-16 mb-10 p-10">
+          <div className=" grid grid-cols-4 gap-5 md:gap-20  mb-10 p-10">
             {/* first customer */}
             <div className="  ">
-              <div className="avatar  h-48">
+              <div className=" avatar w-36 md:w-48 h-36 md:h-48">
                 <img
-                  className=" rounded-full"
+                  className="  rounded-full"
                   src="https://i.ibb.co/4psncQy/1.jpg"
                   alt=""
                 />
               </div>
               <div className="">
                 <p className="font-medium text-xl">Mr. Rifat</p>
-                <div className="rating flex rating-sm mb-2 justify-center">
+                <div className="rating flex rating-sm mb-2 justify-center ">
                   <input
                     type="radio"
                     disabled
@@ -45,12 +45,12 @@ const Customer = () => {
                     className="mask mask-star-2 bg-orange-400"
                   />
                 </div>
-                <p>Best Product in affordable price</p>
+                <p className="">Best Product in affordable price</p>
               </div>
             </div>
             {/* second customer */}
             <div className="">
-              <div className="avatar  h-48">
+              <div className="avatar w-36 md:w-48 h-36 md:h-48">
                 <img
                   className="rounded-full"
                   src="https://i.ibb.co/VCRbLBB/3.jpg"
@@ -92,7 +92,7 @@ const Customer = () => {
             </div>
             {/* third customer */}
             <div className="">
-              <div className="avatar h-48 ">
+              <div className="avatar w-36 md:w-48 h-36 md:h-48 ">
                 <img
                   className=" rounded-full"
                   src="https://i.ibb.co/dGgMCgY/2.jpg"
@@ -134,7 +134,7 @@ const Customer = () => {
             </div>
             {/* fourth experts */}
             <div className="">
-              <div className="avatar h-48">
+              <div className="avatar w-36 md:w-48 h-36 md:h-48">
                 <img
                   className="rounded-full"
                   src="https://i.ibb.co/WBNCng3/4.jpg"
