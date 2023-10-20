@@ -1,9 +1,11 @@
-import { Link } from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
 import Footer from "./Shared/Footer";
 import { FcHome, FcPhone } from "react-icons/fc";
 import { MdEmail } from "react-icons/md";
 import Customer from "./Customer";
+import Brand from "./Brand";
 const Home = () => {
+  const loadedBrands = useLoaderData();
   return (
     <div className="bg-base-200">
       {/* Banner */}
@@ -24,90 +26,9 @@ const Home = () => {
         {/* <Card />; */}
         <div className="mx-5 md:mx-20">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-8 mx-auto my-10">
-            <Link to={"/card/google"}>
-              <div className="card h-[232px] md:h-72 bg-base-100 shadow-xl ">
-                <figure>
-                  <img
-                    className="w-full"
-                    src="https://i.ibb.co/T8k6Vhv/google.jpg"
-                    alt="Google Logo"
-                  />
-                </figure>
-                <div className="card-body mx-auto">
-                  <h2 className="card-title ">Google</h2>
-                </div>
-              </div>
-            </Link>
-            <Link to={"/card/apple"}>
-              <div className="card md:h-72 bg-base-100 shadow-xl">
-                <figure>
-                  <img
-                    className="w-full"
-                    src="https://i.ibb.co/dWQMLdy/apple.png"
-                    alt="Google Logo"
-                  />
-                </figure>
-                <div className="card-body mx-auto">
-                  <h2 className="card-title">Apple</h2>
-                </div>
-              </div>
-            </Link>
-            <Link to={"/card/sony"}>
-              <div className="card h-[232px] md:h-72 bg-base-100 shadow-xl">
-                <figure>
-                  <img
-                    className="w-full"
-                    src="https://i.ibb.co/pLLd6fF/sony.png"
-                    alt="Google Logo"
-                  />
-                </figure>
-                <div className="card-body mx-auto">
-                  <h2 className="card-title">Sony</h2>
-                </div>
-              </div>
-            </Link>
-            <Link to={"/card/samsung"}>
-              <div className="card h-[232px] md:h-72 bg-base-100 shadow-xl">
-                <figure>
-                  <img
-                    className="w-full"
-                    src="https://i.ibb.co/0Vj8j9b/samsung.jpg"
-                    alt="Google Logo"
-                  />
-                </figure>
-                <div className="card-body mx-auto">
-                  <h2 className="card-title">Samsung</h2>
-                </div>
-              </div>
-            </Link>
-            <Link to={"/card/intel"}>
-              <div className="card h-[232px] md:h-72 bg-base-100 shadow-xl">
-                <figure>
-                  <img
-                    className="w-full"
-                    src="https://i.ibb.co/BzVq7Kk/Intel.png"
-                    alt="Google Logo"
-                  />
-                </figure>
-                <div className="card-body mx-auto">
-                  <h2 className="card-title">Intel</h2>
-                </div>
-              </div>
-            </Link>
-            <Link to={"/card/xiaomi"}>
-              <div className="card h-[232px] md:h-72 bg-base-100 shadow-xl">
-                <figure>
-                  <img
-                    className="w-full"
-                    src="https://i.ibb.co/GP6jDN2/mi.jpg"
-                    alt="Google Logo"
-                  />
-                </figure>
-                <div className="card-body mx-auto">
-                  <h2 className="card-title">Xiaomi</h2>
-                </div>
-              </div>
-            </Link>
+            {loadedBrands.map((brands, idx) => (
+              <Brand key={idx} brands={brands}></Brand>
+            ))}
           </div>
         </div>
       </div>
